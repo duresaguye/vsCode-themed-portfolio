@@ -1,0 +1,39 @@
+"use client";
+import { useState } from 'react';
+import Image from 'next/image';
+import TerminalComponent from './Terminal';
+
+const Titlebar = () => {
+  const [showTerminal, setShowTerminal] = useState(false);
+
+  const handleTerminalClick = () => {
+    setShowTerminal(true);
+  };
+
+  return (
+    <>
+      <section className="bg-gray-600 h-[30px] px-2.5 flex items-center justify-center text-white font-sans text-sm border-b border-[#191d20]">
+        <Image
+          src="/vscode.svg"
+          alt="VSCode Icon"
+          height={15}
+          width={15}
+          className="h-[15px] w-[15px]"
+        />
+        <div className="flex-1 ml-2.5 hidden sm:flex">
+          <p className="px-2.5 cursor-pointer underline">File</p>
+          <p className="px-2.5 cursor-pointer underline">Edit</p>
+          <p className="px-2.5 cursor-pointer underline">View</p>
+          <p className="px-2.5 cursor-pointer underline">Go</p>
+          <p className="px-2.5 cursor-pointer underline">Run</p>
+          <p className="px-2.5 cursor-pointer underline" onClick={handleTerminalClick}>Terminal</p>
+          <p className="px-2.5 cursor-pointer underline">Help</p>
+        </div>
+        <p className="flex-1 text-center underline">Duresa Guye - Visual Studio Code</p>
+      </section>
+      {showTerminal && <TerminalComponent />}
+    </>
+  );
+};
+
+export default Titlebar;

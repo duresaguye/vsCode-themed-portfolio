@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { FaLinkedin, FaGithub, FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa'; // Importing social media icons
+import { FaLinkedin, FaGithub, FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa'; 
+import Socials from './Socials';
 
 export default function Sidebar() {
   const [isPortfolioOpen, setIsPortfolioOpen] = useState(true); // Portfolio dropdown open by default
@@ -15,8 +16,11 @@ export default function Sidebar() {
 
   return (
     <div className="bg-gray-900 text-gray-300 w-64 h-full p-4 flex flex-col justify-between">
+       
+    <Socials />
       {/* Explorer Section */}
       <div>
+       
         <h3 className="text-blue-400 mb-4 text-lg font-bold">Explorer</h3>
         <ul className="space-y-3">
           {/* Custom Folder Icon */}
@@ -78,8 +82,8 @@ export default function Sidebar() {
 
       {/* Social Media Icons */}
       <div className="space-y-4 mt-auto">
-        <h3 className="text-blue-400 mb-4 text-lg font-bold">Follow Me</h3>
-        <div className="flex space-x-4">
+     
+        <div className="flex-col space-x-6">
           <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
             <FaLinkedin size={24} />
           </a>
