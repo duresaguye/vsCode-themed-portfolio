@@ -1,0 +1,15 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Custom styles or overrides */
+body {
+  background-color: white;
+  color: black;
+}
+
+/* Dark Mode */
+.dark body {
+  background-color: #1a202c; /* bg-gray-900 */
+  color: #d1d5db; /* text-gray-300 */
+}

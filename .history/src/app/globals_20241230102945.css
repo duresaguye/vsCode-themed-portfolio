@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Remove the previous :root and media query approach */
+
+body {
+  @apply bg-white text-black; /* Default light mode */
+}
+
+/* Dark Mode Styles - Tailwind uses `dark` class */
+.dark body {
+  @apply bg-gray-900 text-gray-300; /* Dark mode styles */
+}
