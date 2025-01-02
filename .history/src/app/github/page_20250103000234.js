@@ -51,7 +51,8 @@ const GitHubCalendar = () => {
       });
     }
   }, []);
-
+  console.log("GitHub Username:", process.env.NEXT_PUBLIC_GITHUB_USERNAME);
+console.log("GitHub API Key:", process.env.GITHUB_API_KEY);
 
   return (
     <div className="container mx-auto p-6">

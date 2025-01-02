@@ -51,6 +51,8 @@ const GitHubCalendar = () => {
       });
     }
   }, []);
+  const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME;
+  const token = process.env.GITHUB_API_KEY;
 
 
   return (

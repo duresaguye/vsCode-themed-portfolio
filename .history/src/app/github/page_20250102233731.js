@@ -11,33 +11,21 @@ const GitHubCalendar = () => {
     const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME;
     const token = process.env.GITHUB_API_KEY;
 
-    console.log("GitHub Username:", username);
-    console.log("GitHub API Key:", token);
+    // Fetch user profile
+    const userRes = await fetch(`https://api.github.com/users/${username}`, {
+      headers: { Authorization: `token ${token}` },
+    });
+    const userData = await userRes.json();
 
-    if (!username || !token) {
-      console.error("GitHub username or API key is missing.");
-      return;
-    }
+    // Fetch repositories
+    const reposRes = await fetch(
+      `https://api.github.com/users/${username}/repos?per_page=6&sort=updated`,
+      { headers: { Authorization: `token ${token}` } }
+    );
+    const reposData = await reposRes.json();
 
-    try {
-      // Fetch user profile
-      const userRes = await fetch(`https://api.github.com/users/${username}`, {
-        headers: { Authorization: `token ${token}` },
-      });
-      const userData = await userRes.json();
-
-      // Fetch repositories
-      const reposRes = await fetch(
-        `https://api.github.com/users/${username}/repos?per_page=6&sort=updated`,
-        { headers: { Authorization: `token ${token}` } }
-      );
-      const reposData = await reposRes.json();
-
-      setUserData(userData);
-      setRepos(reposData);
-    } catch (error) {
-      console.error("Error fetching GitHub data:", error);
-    }
+    setUserData(userData);
+    setRepos(reposData);
   };
 
   useEffect(() => {
@@ -51,7 +39,6 @@ const GitHubCalendar = () => {
       });
     }
   }, []);
-
 
   return (
     <div className="container mx-auto p-6">
@@ -74,7 +61,7 @@ const GitHubCalendar = () => {
       )}
 
       {/* GitHub Calendar */}
-      <div className="bg-gray-800 p-6 rounded-lg shadow-md">
+      <div className="bg-gray-100 p-6 rounded-lg shadow-md">
         <h2 className="text-lg font-semibold  mb-4">Contribution Graph</h2>
         <div className="calendar text-center">
           <p className="text-gray-600">Loading contributions...</p>

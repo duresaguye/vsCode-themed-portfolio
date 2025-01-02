@@ -11,9 +11,6 @@ const GitHubCalendar = () => {
     const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME;
     const token = process.env.GITHUB_API_KEY;
 
-    console.log("GitHub Username:", username);
-    console.log("GitHub API Key:", token);
-
     if (!username || !token) {
       console.error("GitHub username or API key is missing.");
       return;
@@ -51,7 +48,6 @@ const GitHubCalendar = () => {
       });
     }
   }, []);
-
 
   return (
     <div className="container mx-auto p-6">
