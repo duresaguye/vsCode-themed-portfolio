@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Light Owl Theme */
+:root.light-owl {
+  --bg-color: #fafafa;
+  --text-color: #4b5263;
+  --primary-color: #7e57c2;
+  --accent-color: #c792ea;
+}
+
+/* Dark Theme */
+:root.dark-theme {
+  --bg-color: #1e1e1e;
+  --text-color: #d4d4d4;
+  --primary-color: #569cd6;
+  --accent-color: #c586c0;
+}
+
+/* Apply Variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
