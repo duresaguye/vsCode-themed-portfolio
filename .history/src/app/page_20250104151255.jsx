@@ -18,12 +18,12 @@ export default function HomePage() {
               <span className="ml-[0.4rem] w-[0.125em]  animate-typewriter animate-blink"></span>
             </h6>
             <Link href="/projects">
-              <button className="  font-semibold py-[0.5rem] px-[1rem] mr-[1.5rem] border-none cursor-pointer hover:shadow-lg">
+              <button className=" text-[#eee] font-semibold py-[0.5rem] px-[1rem] mr-[1.5rem] border-none cursor-pointer hover:shadow-lg">
                 View Work
               </button>
             </Link>
             <Link href="/contact">
-              <button className=" font-semibold py-[0.5rem] px-[1rem] border-2 border-accent-color bg-transparent cursor-pointer hover:shadow-lg">
+              <button className="text-[#eee] font-semibold py-[0.5rem] px-[1rem] border-2 border-accent-color bg-transparent cursor-pointer hover:shadow-lg">
                 Contact Me
               </button>
             </Link>

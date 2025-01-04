@@ -2,12 +2,10 @@ import Image from 'next/image';
 import { useEffect } from 'react';
 
 const ThemeInfo = ({ icon, name, publisher, theme }) => {
-  const setTheme = (selectedTheme) => {
-    console.log(`Setting theme to: ${selectedTheme}`);
-    // Set the 'data-theme' attribute for theme switching
-    document.documentElement.setAttribute('data-theme', selectedTheme);
-    // Save the selected theme in localStorage
-    localStorage.setItem('theme', selectedTheme);
+  const setTheme = (theme) => {
+    console.log(`Setting theme to: ${theme}`);
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
   };
 
   useEffect(() => {
@@ -15,9 +13,6 @@ const ThemeInfo = ({ icon, name, publisher, theme }) => {
     if (savedTheme) {
       console.log(`Applying saved theme: ${savedTheme}`);
       document.documentElement.setAttribute('data-theme', savedTheme);
-    } else {
-      // If no saved theme, apply the default theme (optional)
-      document.documentElement.setAttribute('data-theme', 'default');
     }
   }, []);
 

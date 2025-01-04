@@ -15,15 +15,15 @@ export default function HomePage() {
             <h6 className="max-w-max text-[#eee] text-2xl font-light mb-12 relative">
               Full Stack Web Developer
               <span className="absolute top-0 right-0 bottom-0 left-0 bg-main-bg animate-typewriter"></span>
-              <span className="ml-[0.4rem] w-[0.125em]  animate-typewriter animate-blink"></span>
+              <span className="ml-[0.4rem] w-[0.125em] bg-accent-color animate-typewriter animate-blink"></span>
             </h6>
             <Link href="/projects">
-              <button className="  font-semibold py-[0.5rem] px-[1rem] mr-[1.5rem] border-none cursor-pointer hover:shadow-lg">
+              <button className="bg-accent-color text-[#eee] font-semibold py-[0.5rem] px-[1rem] mr-[1.5rem] border-none cursor-pointer hover:shadow-lg">
                 View Work
               </button>
             </Link>
             <Link href="/contact">
-              <button className=" font-semibold py-[0.5rem] px-[1rem] border-2 border-accent-color bg-transparent cursor-pointer hover:shadow-lg">
+              <button className="text-[#eee] font-semibold py-[0.5rem] px-[1rem] border-2 border-accent-color bg-transparent cursor-pointer hover:shadow-lg">
                 Contact Me
               </button>
             </Link>
