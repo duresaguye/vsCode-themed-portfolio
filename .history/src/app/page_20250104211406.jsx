@@ -28,6 +28,7 @@ export default function HomePage() {
     </button>
   </Link>
 </div>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=duresaguye&bg_color=transparent" alt="GitHub Activity Graph" />
 
 
           <Illustration className="h-[500px] w-[460px]" />
