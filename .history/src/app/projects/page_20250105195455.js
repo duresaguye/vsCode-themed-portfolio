@@ -20,7 +20,7 @@ export default function Projects() {
               <p className="text-gray-300 mt-2">{project.description}</p>
               <div className="mt-4">
                 <span className="text-sm font-semibold text-gray-400">Tech Stack: </span>
-                <span className="text-sm  text-blue-400">
+                <span className="text-sm text-gray-300 text-blue-400">
                   {project.techStack.join(", ")}
                 </span>
               </div>
