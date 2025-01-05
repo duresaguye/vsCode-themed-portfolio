@@ -120,7 +120,7 @@ export default function Contact() {
                 className="flex items-center text-gray-300 hover:text-blue-400 transition-colors"
               >
                 <FaEnvelope size={24} className="mr-3" />
-                Email Me
+                Email
               </a>
             </li>
           </ul>

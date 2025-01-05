@@ -89,7 +89,7 @@ export default function Contact() {
         </div>
 
         {/* Social Media Links */}
-        <div className="bg-gray-900 p-6 rounded-lg shadow-lg">
+        <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
           <h2 className="text-xl text-blue-400 font-semibold mb-4">Connect With Me</h2>
           <ul className="space-y-4">
             <li>
@@ -120,7 +120,7 @@ export default function Contact() {
                 className="flex items-center text-gray-300 hover:text-blue-400 transition-colors"
               >
                 <FaEnvelope size={24} className="mr-3" />
-                Email Me
+                Email
               </a>
             </li>
           </ul>

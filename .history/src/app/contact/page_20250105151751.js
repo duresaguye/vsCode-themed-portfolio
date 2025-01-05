@@ -1,4 +1,3 @@
-"use client";
 import { useState } from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
@@ -13,7 +12,7 @@ export default function Contact() {
     const data = Object.fromEntries(formData);
 
     try {
-      const response = await fetch('/api/contact', { 
+      const response = await fetch('/api/contact', { // Adjust this endpoint as needed
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -33,12 +32,12 @@ export default function Contact() {
   };
 
   return (
-    <div className="p-6 font-mono">
+    <div className="p-6 bg-gray-900 text-white font-mono">
       <h1 className="text-3xl text-blue-400 font-semibold mb-6">Contact Me</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Contact Form */}
-        <div className="bg-gray-900 p-6 rounded-lg shadow-lg">
+        <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
           <h2 className="text-xl text-blue-400 font-semibold mb-4">Get In Touch</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
@@ -89,7 +88,7 @@ export default function Contact() {
         </div>
 
         {/* Social Media Links */}
-        <div className="bg-gray-900 p-6 rounded-lg shadow-lg">
+        <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
           <h2 className="text-xl text-blue-400 font-semibold mb-4">Connect With Me</h2>
           <ul className="space-y-4">
             <li>
@@ -120,7 +119,7 @@ export default function Contact() {
                 className="flex items-center text-gray-300 hover:text-blue-400 transition-colors"
               >
                 <FaEnvelope size={24} className="mr-3" />
-                Email Me
+                Email
               </a>
             </li>
           </ul>
