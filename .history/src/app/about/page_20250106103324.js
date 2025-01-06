@@ -1,7 +1,3 @@
-import { FaReact, FaNodeJs, FaDocker, FaGithub, FaGit, FaPython } from 'react-icons/fa';
-import { SiNextdotjs, SiDjango, SiFirebase, SiSupabase, SiMongodb, SiTypescript, SiPostgresql } from 'react-icons/si';
-import { FaLinkedin, FaTwitter, FaFacebook, FaInstagram, FaTelegram } from 'react-icons/fa';
-
 export default function AboutMe() {
   return (
     <div className="p-6 font-mono">
@@ -21,69 +17,48 @@ export default function AboutMe() {
       <div className="grid grid-cols-3 md:grid-cols-6 gap-4 mt-4">
         {/* Frontend and Backend */}
         <div className="text-center">
-          <FaReact className="text-blue-500 w-12 h-12 mx-auto" />
+          <img src="/icons/react.svg" alt="React" className="w-12 h-12 mx-auto" />
           <p className="text-gray-300 mt-2">React</p>
         </div>
         <div className="text-center">
-          <SiNextdotjs className="text-black w-12 h-12 mx-auto" />
+          <img src="/icons/nextjs.svg" alt="Next.js" className="w-12 h-12 mx-auto" />
           <p className="text-gray-300 mt-2">Next.js</p>
         </div>
         <div className="text-center">
-          <SiDjango className="text-green-500 w-12 h-12 mx-auto" />
+          <img src="/django.svg" alt="Django" className="w-12 h-12 mx-auto" />
           <p className="text-gray-300 mt-2">Django</p>
         </div>
         <div className="text-center">
-          <FaNodeJs className="text-green-500 w-12 h-12 mx-auto" />
-          <p className="text-gray-300 mt-2">Node.js</p>
-        </div>
-        <div className="text-center">
-          <FaPython className="text-yellow-500 w-12 h-12 mx-auto" />
-          <p className="text-gray-300 mt-2">Python</p>
-        </div>
-        <div className="text-center">
-          <FaReact className="text-blue-400 w-12 h-12 mx-auto" />
+          <img src="/icons/react-native.svg" alt="React Native" className="w-12 h-12 mx-auto" />
           <p className="text-gray-300 mt-2">React Native</p>
         </div>
-
-        {/* Programming Languages */}
         <div className="text-center">
-          <SiTypescript className="text-blue-600 w-12 h-12 mx-auto" />
-          <p className="text-gray-300 mt-2">TypeScript</p>
+          <img src="/icons/tailwindcss.svg" alt="TailwindCSS" className="w-12 h-12 mx-auto" />
+          <p className="text-gray-300 mt-2">TailwindCSS</p>
+        </div>
+        <div className="text-center">
+          <img src="/icons/python.svg" alt="Python" className="w-12 h-12 mx-auto" />
+          <p className="text-gray-300 mt-2">Python</p>
         </div>
 
         {/* Databases */}
         <div className="text-center">
-          <SiPostgresql className="text-blue-500 w-12 h-12 mx-auto" />
+          <img src="/icons/postgresql.svg" alt="PostgreSQL" className="w-12 h-12 mx-auto" />
           <p className="text-gray-300 mt-2">PostgreSQL</p>
         </div>
         <div className="text-center">
-          <SiFirebase className="text-yellow-400 w-12 h-12 mx-auto" />
+          <img src="/icons/firebase.svg" alt="Firebase" className="w-12 h-12 mx-auto" />
           <p className="text-gray-300 mt-2">Firebase</p>
         </div>
         <div className="text-center">
-          <SiSupabase className="text-green-600 w-12 h-12 mx-auto" />
+          <img src="/icons/supabase.svg" alt="Supabase" className="w-12 h-12 mx-auto" />
           <p className="text-gray-300 mt-2">Supabase</p>
         </div>
         <div className="text-center">
-          <SiMongodb className="text-green-500 w-12 h-12 mx-auto" />
+          <img src="/icons/mongodb.svg" alt="MongoDB" className="w-12 h-12 mx-auto" />
           <p className="text-gray-300 mt-2">MongoDB</p>
         </div>
-
-        {/* Tools and Platforms */}
-        <div className="text-center">
-          <FaDocker className="text-blue-400 w-12 h-12 mx-auto" />
-          <p className="text-gray-300 mt-2">Docker</p>
-        </div>
-        <div className="text-center">
-          <FaGit className="text-orange-600 w-12 h-12 mx-auto" />
-          <p className="text-gray-300 mt-2">Git</p>
-        </div>
-        <div className="text-center">
-          <FaGithub className="text-black w-12 h-12 mx-auto" />
-          <p className="text-gray-300 mt-2">GitHub</p>
-        </div>
       </div>
-
 
       <p className="text-gray-300 mt-6">
         If you're looking for a reliable developer to bring your ideas to life or need advice on building scalable, robust systems, feel free to reach out. Let's collaborate and create something amazing together!

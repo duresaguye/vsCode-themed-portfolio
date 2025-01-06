@@ -2,41 +2,13 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Illustration from './components/Illustration';
-import styled, { keyframes } from 'styled-components';
 
 const titles = [
   "Full Stack Web Developer",
-  "Data Science & Analytics Enthusiast",
-  
+  "Data Scientist",
+  "Data Analyst",
 
 ];
-
-const typewriter = keyframes`
-  from { width: 0; }
-  to { width: 100%; }
-`;
-
-const blink = keyframes`
-  50% { border-color: transparent; }
-`;
-const colorChange = keyframes`
-  0% { color: #ff5733; }    /* Vibrant Red */
-  25% { color: #33ff57; }   /* Green */
-  50% { color: #3357ff; }   /* Blue */
-  75% { color: #ff33a1; }   /* Pink */
-  100% { color: #ff5733; }  /* Vibrant Red again */
-`;
-const AnimatedTitle = styled.span`
-  animation: ${colorChange} 3s infinite;
-`;
-
-const TypewriterEffect = styled.span`
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 0.15em solid #fff;
-  animation: ${typewriter} 2s steps(40) 1s 1 normal both, ${blink} 500ms steps(40) infinite normal;
-`;
 
 export default function HomePage() {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
@@ -59,9 +31,9 @@ export default function HomePage() {
           <div className="text-center">
             <h1 className="text-5xl font-medium mb-2">Duresa Guye</h1>
             <h6 className="max-w-max text-[#eee] text-2xl font-light mb-12 relative">
-              <AnimatedTitle>{titles[currentTitleIndex]}</AnimatedTitle>
-              <TypewriterEffect className="absolute top-0 right-0 bottom-0 left-0 bg-main-bg"></TypewriterEffect>
-              <TypewriterEffect className="ml-[0.4rem] w-[0.125em]"></TypewriterEffect>
+              {titles[currentTitleIndex]}
+              <span className="absolute top-0 right-0 bottom-0 left-0 bg-main-bg animate-typewriter"></span>
+              <span className="ml-[0.4rem] w-[0.125em] animate-typewriter animate-blink"></span>
             </h6>
             <Link href="/projects">
               <button className="font-semibold py-[0.5rem] px-[1rem] mr-[1.5rem] border-none cursor-pointer transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-[0_0_15px_rgba(0,255,255,0.7),0_0_25px_rgba(0,255,255,0.6),0_0_35px_rgba(0,255,255,0.5)] hover:text-[#00f9ff]">

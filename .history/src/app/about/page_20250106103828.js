@@ -84,6 +84,27 @@ export default function AboutMe() {
         </div>
       </div>
 
+      <h2 className="text-xl text-blue-400 font-semibold mt-6">Connect with Me</h2>
+      <div className="flex space-x-4 mt-4">
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin className="text-blue-600 w-8 h-8" />
+        </a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <FaGithub className="text-black w-8 h-8" />
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <FaTwitter className="text-blue-400 w-8 h-8" />
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <FaFacebook className="text-blue-600 w-8 h-8" />
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <FaInstagram className="text-pink-500 w-8 h-8" />
+        </a>
+        <a href="https://telegram.org" target="_blank" rel="noopener noreferrer">
+          <FaTelegram className="text-blue-500 w-8 h-8" />
+        </a>
+      </div>
 
       <p className="text-gray-300 mt-6">
         If you're looking for a reliable developer to bring your ideas to life or need advice on building scalable, robust systems, feel free to reach out. Let's collaborate and create something amazing together!
@@ -91,3 +112,4 @@ export default function AboutMe() {
     </div>
   );
 }
+  

@@ -13,7 +13,26 @@
     --foreground: #ededed;
   }
 }
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
 
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.animate-typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid #fff;
+  animation: typewriter 2s steps(40) 1s 1 normal both, blink 500ms steps(40) infinite normal;
+}
+
+.animate-blink {
+  animation: blink 1s steps(1) infinite;
+}
 
 body {
   color: var(--foreground);

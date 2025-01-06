@@ -13,6 +13,61 @@
     --foreground: #ededed;
   }
 }
+/* Typewriter effect for the text */
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-fade-in-out {
+  animation: fadeInOut 6s ease-in-out forwards;
+}
+
+.animate-fade-in-out-delay-500 {
+  animation: fadeInOut 6s ease-in-out 0.5s forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.animate-blink {
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Specific color for different parts of the text */
+.text-fullstack {
+  color: #00f9ff;
+}
+
+.text-datascience {
+  color: #ff6347;
+}
 
 
 body {

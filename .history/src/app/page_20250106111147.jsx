@@ -6,9 +6,9 @@ import styled, { keyframes } from 'styled-components';
 
 const titles = [
   "Full Stack Web Developer",
-  "Data Science & Analytics Enthusiast",
-  
-
+  "Data Scientist",
+  "Data Analyst",
+  "Ethicist"
 ];
 
 const typewriter = keyframes`
@@ -19,13 +19,15 @@ const typewriter = keyframes`
 const blink = keyframes`
   50% { border-color: transparent; }
 `;
+
 const colorChange = keyframes`
-  0% { color: #ff5733; }    /* Vibrant Red */
-  25% { color: #33ff57; }   /* Green */
-  50% { color: #3357ff; }   /* Blue */
-  75% { color: #ff33a1; }   /* Pink */
-  100% { color: #ff5733; }  /* Vibrant Red again */
+  0% { color: #ff5733; }
+  25% { color: #33ff57; }
+  50% { color: #3357ff; }
+  75% { color: #ff33a1; }
+  100% { color: #ff5733; }
 `;
+
 const AnimatedTitle = styled.span`
   animation: ${colorChange} 3s infinite;
 `;
@@ -36,6 +38,33 @@ const TypewriterEffect = styled.span`
   white-space: nowrap;
   border-right: 0.15em solid #fff;
   animation: ${typewriter} 2s steps(40) 1s 1 normal both, ${blink} 500ms steps(40) infinite normal;
+`;
+
+const Button = styled.button`
+  font-semibold;
+  py: 0.5rem;
+  px: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7), 0 0 25px rgba(0, 255, 255, 0.6), 0 0 35px rgba(0, 255, 255, 0.5);
+    color: #00f9ff;
+  }
+`;
+
+const PrimaryButton = styled(Button)`
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  margin-right: 1.5rem;
+`;
+
+const SecondaryButton = styled(Button)`
+  border: 2px solid var(--accent-color);
+  background-color: transparent;
+  color: var(--accent-color);
 `;
 
 export default function HomePage() {
@@ -63,15 +92,11 @@ export default function HomePage() {
               <TypewriterEffect className="absolute top-0 right-0 bottom-0 left-0 bg-main-bg"></TypewriterEffect>
               <TypewriterEffect className="ml-[0.4rem] w-[0.125em]"></TypewriterEffect>
             </h6>
-            <Link href="/projects">
-              <button className="font-semibold py-[0.5rem] px-[1rem] mr-[1.5rem] border-none cursor-pointer transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-[0_0_15px_rgba(0,255,255,0.7),0_0_25px_rgba(0,255,255,0.6),0_0_35px_rgba(0,255,255,0.5)] hover:text-[#00f9ff]">
-                View Work
-              </button>
+            <Link href="/projects" passHref>
+              <PrimaryButton>View Work</PrimaryButton>
             </Link>
-            <Link href="/contact">
-              <button className="font-semibold py-[0.5rem] px-[1rem] border-2 border-accent-color bg-transparent cursor-pointer transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-[0_0_15px_rgba(0,255,255,0.7),0_0_25px_rgba(0,255,255,0.6),0_0_35px_rgba(0,255,255,0.5)] hover:text-[#00f9ff]">
-                Contact Me
-              </button>
+            <Link href="/contact" passHref>
+              <SecondaryButton>Contact Me</SecondaryButton>
             </Link>
           </div>
           <Illustration className="h-[500px] w-[460px]" />

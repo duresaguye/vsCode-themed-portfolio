@@ -13,6 +13,59 @@
     --foreground: #ededed;
   }
 }
+/* Fade-in effect for the two text spans */
+@keyframes fadeIn1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-1 {
+  animation: fadeIn1 1.5s ease-out forwards;
+}
+
+.animate-fade-in-2 {
+  animation: fadeIn2 1.5s ease-out 1.5s forwards; /* Start after the first text */
+}
+
+/* Additional styling for typewriter effect */
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-typewriter {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typewriter 3s steps(40) 1s 1 normal both;
+}
+
+.animate-blink {
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
 
 
 body {

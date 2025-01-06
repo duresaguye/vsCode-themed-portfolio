@@ -84,6 +84,7 @@ export default function AboutMe() {
         </div>
       </div>
 
+    
 
       <p className="text-gray-300 mt-6">
         If you're looking for a reliable developer to bring your ideas to life or need advice on building scalable, robust systems, feel free to reach out. Let's collaborate and create something amazing together!

@@ -19,13 +19,9 @@ const typewriter = keyframes`
 const blink = keyframes`
   50% { border-color: transparent; }
 `;
-const colorChange = keyframes`
-  0% { color: #ff5733; }    /* Vibrant Red */
-  25% { color: #33ff57; }   /* Green */
-  50% { color: #3357ff; }   /* Blue */
-  75% { color: #ff33a1; }   /* Pink */
-  100% { color: #ff5733; }  /* Vibrant Red again */
-`;
+
+
+
 const AnimatedTitle = styled.span`
   animation: ${colorChange} 3s infinite;
 `;

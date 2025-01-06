@@ -13,7 +13,38 @@
     --foreground: #ededed;
   }
 }
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
 
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@keyframes colorChange {
+  0% { color: #ff5733; }
+  25% { color: #33ff57; }
+  50% { color: #3357ff; }
+  75% { color: #ff33a1; }
+  100% { color: #ff5733; }
+}
+
+.animate-typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid #fff;
+  animation: typewriter 2s steps(40) 1s 1 normal both, blink 500ms steps(40) infinite normal;
+}
+
+.animate-blink {
+  animation: blink 1s steps(1) infinite;
+}
+
+.animated-title {
+  animation: colorChange 3s infinite;
+}
 
 body {
   color: var(--foreground);
