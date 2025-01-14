@@ -1,6 +1,7 @@
 Image preview
+![Screenshot From 2025-01-14 23-29-02](https://github.com/user-attachments/assets/86661f31-f2f0-45f2-8fbe-b9e230527bd8)
 
-![Screenshot From 2025-01-14 11-29-33](https://github.com/user-attachments/assets/e152a895-2a81-43d6-b2b2-a473fd3a237c)
+
 ## Getting Started
 
 First, run the development server:
