@@ -9,6 +9,7 @@ function TechIllustration(props) {
       src="/dure.svg"
       width='520'
       height='529'
+      alt='duresa'
       />
   
       

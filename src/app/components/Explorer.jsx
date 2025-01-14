@@ -21,18 +21,27 @@ const Explorer = () => {
         Explorer
       </p>
       <div>
-        <button
-          className="flex items-center w-full px-2 py-2 text-sm font-semibold uppercase cursor-pointer"
-          onClick={() => setPortfolioOpen(!portfolioOpen)}
-          aria-expanded={portfolioOpen}
-        >
-          <ChevronRight
-            className={`transition-transform ${
-              portfolioOpen ? 'rotate-90' : ''
-            }`}
-          />
-          <span className="ml-2">Portfolio</span>
-        </button>
+      <button
+  style={{
+    all: 'unset',
+    display: 'flex',
+    alignItems: 'center',
+    width: '100%',
+    padding: '0.5rem',
+    fontSize: '0.875rem',
+    fontWeight: '600',
+    textTransform: 'uppercase',
+    cursor: 'pointer',
+  }}
+  onClick={() => setPortfolioOpen(!portfolioOpen)}
+  aria-expanded={portfolioOpen}
+>
+  <ChevronRight
+    className={`transition-transform ${portfolioOpen ? 'rotate-90' : ''}`}
+  />
+  <span style={{ marginLeft: '0.5rem' }}>Portfolio</span>
+</button>
+
         <div className={`${portfolioOpen ? 'block' : 'hidden'} py-2`}>
           {explorerItems.map((item) => (
             <Link href={item.path} key={item.name} passHref legacyBehavior>

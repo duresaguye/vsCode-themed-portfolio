@@ -14,12 +14,13 @@
   }
 }
 
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+[data-theme="default"] {
+  --main-bg: #ffffff;
+  --text-color: #011627;
+  --button-bg: #176f2c;
+  --button-text: #dcffe4;
 }
+
 /* GitHub Dark */
 :root {
   --main-bg: #24292e;
@@ -176,3 +177,31 @@ body {
   --article-bg: #031d33;
 }
 
+body {
+  color: var(--text-color);
+  background-color: var(--main-bg);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--button-bg);
+  opacity: 0.8;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
+}
