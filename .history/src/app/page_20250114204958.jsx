@@ -20,9 +20,7 @@ const blink = keyframes`
   50% { border-color: transparent; }
 `;
 const colorChange = keyframes`
-  0% { color: #ff5733; }    /* Vibrant Red */
-  25% { color: #33ff57; }   /* Green */
-
+  /* Vibrant Red again */
 `;
 const AnimatedTitle = styled.span`
   animation: ${colorChange} 3s infinite;

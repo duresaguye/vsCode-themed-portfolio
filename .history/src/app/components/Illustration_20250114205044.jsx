@@ -11,7 +11,7 @@ function TechIllustration(props) {
       height='529'
       />
   
-      
+    
     </>
  
   );
