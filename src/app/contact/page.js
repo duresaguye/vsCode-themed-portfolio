@@ -97,7 +97,7 @@ export default function Contact() {
           <ul className="space-y-4">
             <li>
               <a
-                href="https://www.linkedin.com/in/yourprofile"
+                href="https://www.linkedin.com/in/duresa-guye-5aba5625a/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-gray-300 hover:text-blue-400 transition-colors"
@@ -108,7 +108,7 @@ export default function Contact() {
             </li>
             <li>
               <a
-                href="https://github.com/yourprofile"
+                href="https://github.com/duresaguye"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-gray-300 hover:text-blue-400 transition-colors"
