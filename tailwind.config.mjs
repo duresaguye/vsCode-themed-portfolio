@@ -10,8 +10,6 @@ export default {
         '90': '90deg',
       },
       colors: {
-       
-       
         
       },
       fontFamily: {
