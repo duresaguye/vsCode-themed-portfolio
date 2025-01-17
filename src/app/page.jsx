@@ -3,38 +3,79 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const titles = [
-  "Full Stack Developer",
-  "Data Science Enthusiast",
+  "🌟 Full Stack Developer",
+  "📊 Data Science Enthusiast",
+  "🚀 Lifelong Learner",
+];
+
+const funFacts = [
+  "💡 Ada Lovelace is considered the first programmer in history!",
+  "🐞 The first computer 'bug' was an actual moth.",
+  "👋 'Hello, World!' is the traditional first program in any language.",
+  "🚀 NASA’s moon landing code had less processing power than your smartphone!",
+  "🛠️ Programming languages like Python and Swift allow emoji variables. Example: 🚀 = 'Rocket'",
+
+  "🔢 COBOL, a 1959 programming language, still powers many banking systems today.",
+  "🌐 The Internet loves Python – YouTube, Instagram, and Dropbox were built with it.",
 ];
 
 export default function HomePage() {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+  const [currentFactIndex, setCurrentFactIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const titleInterval = setInterval(() => {
       setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
-    }, 4000); // Change title every 4 seconds
+    }, 3000);
 
-    return () => clearInterval(interval);
+    const factInterval = setInterval(() => {
+      setCurrentFactIndex((prevIndex) => (prevIndex + 1) % funFacts.length);
+    }, 5000); // Change fun fact every 5 seconds
+
+    return () => {
+      clearInterval(titleInterval);
+      clearInterval(factInterval);
+    };
   }, []);
 
   return (
-    <div className="flex items-center justify-center  mt-20">
-      <div className="text-center">
-        <h1 className="text-4xl font-extrabold ">Duresa Guye</h1>
-        <h2 className="mt-4 text-2xl font-semibold ">{titles[currentTitleIndex]}</h2>
-        <div className="mt-6 space-x-4">
+    <div className="mt-34 p-4">
+      <div className=" flex items-center flex-col justfify-center">
+        {/* Welcome Message */}
+        <h3 className="text-xl font-medium mb-4 ">
+          <span className="mr-2">👋</span> Hey, welcome to my portfolio!
+        </h3>
+        {/* Name */}
+        <h1 className="text-5xl font-bold tracking-tight ">
+          I am Duresa Guye
+        </h1>
+        {/* Dynamic Titles */}
+        <h2 className="mt-10 text-2xl font-semibold  animate-pulse">
+          {titles[currentTitleIndex]}
+        </h2>
+        {/* Buttons */}
+        <div className="mt-24 space-x-4 ">
           <Link href="/projects">
-            <button className="px-6 py-2 text-white bg-blue-500 rounded-full hover:bg-blue-600 transition duration-300">
+            <button className="px-6 py-2 text-white bg-gradient-to-r from-blue-500 to-blue-700 rounded-full shadow-lg hover:shadow-xl transition duration-300">
               View Work
             </button>
           </Link>
           <Link href="/contact">
-            <button className="px-6 py-2 text-white bg-green-500 rounded-full hover:bg-green-600 transition duration-300">
+            <button className="px-6 py-2 text-white bg-gradient-to-r from-green-500 to-green-700 rounded-full shadow-lg hover:shadow-xl transition duration-300">
               Contact Me
             </button>
           </Link>
         </div>
+      </div>
+
+      {/* Fun Facts Section positioned in the top-right corner */}
+      <div className="absolute top-96 right-0 mt-96 mr-4 text-center">
+        <h3 className="text-2xl font-bold mb-4">
+          💻 Fun Facts About Coding
+        </h3>
+        <p className="text-lg italic">
+          {funFacts[currentFactIndex]}
+        </p>
       </div>
     </div>
   );

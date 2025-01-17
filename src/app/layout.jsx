@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import ServerLayout from "./server-layout";
 
+
 export default function RootLayout({ children, pageProps }) {
   const [theme, setTheme] = useState("default");
 

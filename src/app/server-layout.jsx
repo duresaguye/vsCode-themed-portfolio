@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Layout from "./components/Layout";
-import Head from "./components/Head";
+import CustomHead from "./components/Head";
 
 
 const geistSans = Geist({
@@ -22,9 +22,10 @@ export const metadata = {
 export default function ServerLayout({ children }) {
   return (
     <html lang="en">
+        <CustomHead  />
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Layout>
-          <Head />
+      
           {children}
         
         </Layout>
