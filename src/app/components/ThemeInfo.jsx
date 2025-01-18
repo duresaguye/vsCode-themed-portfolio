@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 
 const ThemeInfo = ({ icon, name, publisher, theme }) => {
   const setTheme = (selectedTheme) => {
-    console.log(`Setting theme to: ${selectedTheme}`);
+
     // Set the 'data-theme' attribute for theme switching
     document.documentElement.setAttribute('data-theme', selectedTheme);
     // Save the selected theme in localStorage

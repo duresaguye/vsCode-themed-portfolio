@@ -9,15 +9,13 @@ const titles = [
 ];
 
 const funFacts = [
-  "💡 Ada Lovelace is considered the first programmer in history!",
-  "🐞 The first computer 'bug' was an actual moth.",
-  "👋 'Hello, World!' is the traditional first program in any language.",
-  "🚀 NASA’s moon landing code had less processing power than your smartphone!",
-  "🛠️ Programming languages like Python and Swift allow emoji variables. Example: 🚀 = 'Rocket'",
-
-  "🔢 COBOL, a 1959 programming language, still powers many banking systems today.",
-  "🌐 The Internet loves Python – YouTube, Instagram, and Dropbox were built with it.",
+  "👩‍💻 Ada Lovelace is hailed as the first programmer in history.",
+  "🐍 Python is named after Monty Python, not the snake!",
+  "🌐 JavaScript was created in just 10 days by Brendan Eich.",
+  "📱 Your smartphone is more powerful than the computers used for the Apollo 11 mission.",
+  "🎨 You can use emojis as variable names in JavaScript and Python!"
 ];
+
 
 export default function HomePage() {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
@@ -42,7 +40,7 @@ export default function HomePage() {
     <div className="mt-34 p-4">
       <div className=" flex items-center flex-col justfify-center">
         {/* Welcome Message */}
-        <h3 className="text-xl font-medium mb-4 ">
+        <h3 className="text-xl font-bold mb-4 ">
           <span className="mr-2">👋</span> Hey, welcome to my portfolio!
         </h3>
         {/* Name */}

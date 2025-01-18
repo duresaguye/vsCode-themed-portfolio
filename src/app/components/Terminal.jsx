@@ -1,14 +1,14 @@
 "use client";
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { Terminal } from '@xterm/xterm';
 import '@xterm/xterm/css/xterm.css';
 import { useRouter } from 'next/navigation';
 
 const TerminalComponent = () => {
   const terminalRef = useRef(null);
-  const [userInput, setUserInput] = useState('');
   const router = useRouter(); // Initialize the router
+  let userInput = '';
 
   useEffect(() => {
     const term = new Terminal({
@@ -28,36 +28,35 @@ const TerminalComponent = () => {
 
     term.onData((data) => {
       if (data === '\r') {
-        // When user presses Enter
+        // User presses Enter
         const command = userInput.trim();
         if (command) {
           term.writeln(''); // Move to the next line
           if (command === 'help') {
             term.writeln('Available commands: help, about, projects, clear, exit');
           } else if (command === 'about') {
-            term.writeln('This is my portfolio showcasing my work and projects.');
+            term.writeln('my name is Duresa Guye AKA Dura This is my portfolio showcasing my work and projects.');
           } else if (command === 'projects') {
             term.writeln('1. Project One\n2. Project Two\n3. Project Three');
           } else if (command === 'clear') {
             term.clear();
           } else if (command === 'exit') {
-            router.push('/'); // Navigate to the home page
+            window.location.href = '/'; // Navigate to the home page
           } else {
             term.writeln(`'${command}' is not a recognized command.`);
           }
         }
-
-        setUserInput(''); // Clear the input buffer
+        userInput = ''; // Clear the input buffer
         term.write('dura@dura:~$ '); // Show the prompt again
       } else if (data === '\u007F') {
         // Handle backspace
         if (userInput.length > 0) {
-          setUserInput((prev) => prev.slice(0, -1));
+          userInput = userInput.slice(0, -1);
           term.write('\b \b'); // Remove last character from terminal display
         }
       } else {
         // Add character to the input buffer
-        setUserInput((prev) => prev + data);
+        userInput += data;
         term.write(data); // Display the typed character
       }
     });
@@ -65,7 +64,7 @@ const TerminalComponent = () => {
     return () => {
       term.dispose();
     };
-  }, [userInput, router]);
+  }, [router]);
 
   return <div ref={terminalRef} style={{ height: '400px', width: '100%' }} />;
 };
