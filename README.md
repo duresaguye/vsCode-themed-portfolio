@@ -16,8 +16,8 @@ Ensure you have the following installed:
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/portfolio.git
-   cd portfolio
+   git clone https://github.com/duresaguye/vsCode-themed-portfolio
+   cd vsCode-themed-portfolio
    ```
 
 2. Install dependencies:
@@ -61,8 +61,7 @@ http://localhost:3000
 
 ## Screenshots
 Here’s a preview of the portfolio:
-![Portfolio Preview](public/portfolio-preview.png)
-
+![Portfolio Screenshot](public/portfolio.png)
 ## Contributing
 Feel free to contribute to this project by opening issues or submitting pull requests.
 
