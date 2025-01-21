@@ -1,4 +1,4 @@
-import { link } from "fs";
+
 
 const projects = [
   {
@@ -46,7 +46,7 @@ const projects = [
     description: "a techeth website",
     techStack: ["React js","next js", "Firebase"],
     link: "https://techeth-digital-soultion.vercel.app/",
-    github: "https://github.com/username/techeth-website",
+    github: "https://github.com/duresaguye/techeth-website",
     image: "techet.png", 
   },
   ];

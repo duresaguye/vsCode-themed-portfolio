@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import { Terminal } from '@xterm/xterm';
 import '@xterm/xterm/css/xterm.css';
 import { useRouter } from 'next/navigation';
+import projects from '../data/Project'
 
 const TerminalComponent = () => {
   const terminalRef = useRef(null);
@@ -35,9 +36,17 @@ const TerminalComponent = () => {
           if (command === 'help') {
             term.writeln('Available commands: help, about, projects, clear, exit');
           } else if (command === 'about') {
-            term.writeln('my name is Duresa Guye AKA Dura This is my portfolio showcasing my work and projects.');
+            term.writeln('My name is Duresa Guye AKA Dura. This is my portfolio showcasing my work and projects.');
           } else if (command === 'projects') {
-            term.writeln('1. Project One\n2. Project Two\n3. Project Three');
+            // Generate project list with styling
+            projects.forEach((project, index) => {
+              term.writeln(`\x1b[1;32m${index + 1}. ${project.title}\x1b[0m`);
+              term.writeln(`   \x1b[1;34mDescription:\x1b[0m ${project.description}`);
+              term.writeln(`   \x1b[1;34mTech Stack:\x1b[0m ${project.techStack.join(', ')}`);
+              term.writeln(`   \x1b[1;34mLive Demo:\x1b[0m ${project.link}`);
+              term.writeln(`   \x1b[1;34mGitHub:\x1b[0m ${project.github}`);
+              term.writeln('');
+            });
           } else if (command === 'clear') {
             term.clear();
           } else if (command === 'exit') {
