@@ -8,10 +8,6 @@ Welcome to my portfolio! This project showcases my work as a full-stack web deve
 
 Follow the steps below to set up and run the project locally:
 
-### Prerequisites
-Ensure you have the following installed:
-- Node.js (LTS version recommended)
-- npm, yarn, pnpm, or bun (for managing dependencies)
 
 ### Installation
 1. Clone the repository:
@@ -50,20 +46,24 @@ http://localhost:3000
 ```
 
 ## Features
-- A visually appealing portfolio showcasing projects and skills.
-- Fully responsive design for all screen sizes.
-- Dynamic and interactive sections for user engagement.
-- Inspired by the VS Code interface with a sleek and modern look.
+    🔥 VS Code-Inspired Design: A unique and visually engaging interface.
+    📱 Responsive: Looks great on any device, from desktops to smartphones.
+    💻 Dynamic Content: Interactive sections showcasing projects and skills.
+    🎨 themes: VS Code theme.
+    ⚡ Fast and Efficient: Built with modern frameworks for optimal performance.
+
 
 ## Technologies Used
-- **Frontend**: Next.js, Tailwind CSS
-- **Backend**: Nodemailer
+- **Frontend**: Next.js: React-based framework for fast and scalable web apps.
+                Tailwind CSS: Utility-first CSS framework for rapid UI development.
+- **Backend**: Nodemailer: For handling form submissions and email notifications.
+- **Terminal**: xterm: Interactive terminal-like.
 
-## Screenshots
-Here’s a preview of the portfolio:
-![Portfolio Screenshot](public/portfolio.png)
 ## Contributing
-Feel free to contribute to this project by opening issues or submitting pull requests.
+    Want to improve this project? Contributions are welcome!
+
+    Open an issue for bugs or feature suggestions.
+    Submit a pull request with your improvements.
 
 ## License
 This project is licensed under the MIT License.
