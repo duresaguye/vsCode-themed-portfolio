@@ -16,7 +16,6 @@ const funFacts = [
   "🎨 You can use emojis as variable names in JavaScript and Python!"
 ];
 
-
 export default function HomePage() {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
   const [currentFactIndex, setCurrentFactIndex] = useState(0);
@@ -38,21 +37,21 @@ export default function HomePage() {
 
   return (
     <div className="mt-34 p-4">
-      <div className=" flex items-center flex-col justfify-center">
+      <div className="flex items-center flex-col justify-center">
         {/* Welcome Message */}
-        <h3 className="text-xl font-bold mb-4 ">
+        <h3 className="text-xl font-bold mb-4">
           <span className="mr-2">👋</span> Hey, welcome to my portfolio!
         </h3>
         {/* Name */}
-        <h1 className="text-5xl font-bold tracking-tight ">
+        <h1 className="text-5xl font-bold tracking-tight">
           I am Duresa Guye
         </h1>
         {/* Dynamic Titles */}
-        <h2 className="mt-10 text-2xl font-semibold  animate-pulse">
+        <h2 className="mt-10 text-2xl font-semibold animate-pulse">
           {titles[currentTitleIndex]}
         </h2>
         {/* Buttons */}
-        <div className="mt-24 space-x-4 ">
+        <div className="mt-24 space-x-4">
           <Link href="/projects">
             <button className="px-6 py-2 text-white bg-gradient-to-r from-blue-500 to-blue-700 rounded-full shadow-lg hover:shadow-xl transition duration-300">
               View Work
@@ -61,6 +60,14 @@ export default function HomePage() {
           <Link href="/contact">
             <button className="px-6 py-2 text-white bg-gradient-to-r from-green-500 to-green-700 rounded-full shadow-lg hover:shadow-xl transition duration-300">
               Contact Me
+            </button>
+          </Link>
+        </div>
+        {/* Add See My CV Button */}
+        <div className="mt-4">
+          <Link href="/cv">
+            <button className="px-6 py-2 text-white bg-gradient-to-r from-purple-500 to-purple-700 rounded-full shadow-lg hover:shadow-xl transition duration-300">
+              See My CV
             </button>
           </Link>
         </div>
