@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react';
 import { Terminal } from '@xterm/xterm';
 import '@xterm/xterm/css/xterm.css';
 import { useRouter } from 'next/navigation';
-import projects from '../data/Project'
+import projects from '../data/Project'; // Import the project data
 
 const TerminalComponent = () => {
   const terminalRef = useRef(null);
@@ -15,17 +15,17 @@ const TerminalComponent = () => {
     const term = new Terminal({
       cursorBlink: true,
       theme: {
-        background: '#1e1e1e',
-        foreground: '#ffffff',
-        cursor: '#ffffff',
-        selectionBackground: '#4c4c4c',
+        background: '#401219', 
+        foreground: '#dcdcdc', // Light gray text
+        cursor: '#dcdcdc', // Light gray cursor
+        selectionBackground: '#4c4c4c', // Medium gray selection background
       },
     });
 
     term.open(terminalRef.current);
     term.writeln('Welcome to my portfolio! 🎉');
     term.writeln('Type "help" for available commands.');
-    term.write('dura@dura:~$ '); // Show the prompt initially
+    term.write('\x1b[38;5;46mdura@dura:~$ \x1b[0m'); // Show the prompt initially in green color
 
     term.onData((data) => {
       if (data === '\r') {
@@ -40,7 +40,9 @@ const TerminalComponent = () => {
           } else if (command === 'projects') {
             // Generate project list with styling
             projects.forEach((project, index) => {
-              term.writeln(`\x1b[1;32m${index + 1}. ${project.title}\x1b[0m`);
+              term.writeln(`\x1b[1;34m${index + 1}. ${project.title}\x1b[0m`);
+               
+            
               term.writeln(`   \x1b[1;34mDescription:\x1b[0m ${project.description}`);
               term.writeln(`   \x1b[1;34mTech Stack:\x1b[0m ${project.techStack.join(', ')}`);
               term.writeln(`   \x1b[1;34mLive Demo:\x1b[0m ${project.link}`);
@@ -56,7 +58,7 @@ const TerminalComponent = () => {
           }
         }
         userInput = ''; // Clear the input buffer
-        term.write('dura@dura:~$ '); // Show the prompt again
+        term.write('\x1b[38;5;46mdura@dura:~$ \x1b[0m'); // Show the prompt again in green color
       } else if (data === '\u007F') {
         // Handle backspace
         if (userInput.length > 0) {
