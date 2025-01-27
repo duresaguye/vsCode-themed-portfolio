@@ -11,6 +11,7 @@
   "dependencies": {
     "@fontsource/fira-code": "^5.1.1",
     "@types/styled-components": "^5.1.34",
+    "@vercel/analytics": "^1.4.1",
     "@xterm/xterm": "^5.5.0",
     "framer-motion": "^11.15.0",
     "github-calendar": "^2.3.4",

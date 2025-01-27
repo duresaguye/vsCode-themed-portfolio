@@ -74,7 +74,7 @@ export default function HomePage() {
       </div>
 
       {/* Fun Facts Section positioned in the top-right corner */}
-      <div className="absolute top-96 right-0 mt-96 mr-4 text-center">
+      <div className="hidden md:block absolute top-96 right-0 mt-96 mr-4 text-center">
         <h3 className="text-2xl font-bold mb-4">
           💻 Fun Facts About Coding
         </h3>
